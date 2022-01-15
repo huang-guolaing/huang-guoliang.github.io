@@ -6,7 +6,7 @@
   <link href="https://huang-guoliang.github.io/atom.xml" rel="self"/>
   
   <link href="https://huang-guoliang.github.io/"/>
-  <updated>2022-01-15T08:05:41.356Z</updated>
+  <updated>2022-01-15T08:55:05.997Z</updated>
   <id>https://huang-guoliang.github.io/</id>
   
   <author>
@@ -17,18 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>deep_learning_from_scratch_contents</title>
-    <link href="https://huang-guoliang.github.io/2022/01/15/Machine%20Learning/deep-learning-from-scratch-contents/"/>
-    <id>https://huang-guoliang.github.io/2022/01/15/Machine%20Learning/deep-learning-from-scratch-contents/</id>
+    <title>========= 欢迎光临我的博客 =========</title>
+    <link href="https://huang-guoliang.github.io/2022/01/15/index/"/>
+    <id>https://huang-guoliang.github.io/2022/01/15/index/</id>
+    <published>2022-01-15T08:18:40.000Z</published>
+    <updated>2022-01-15T08:55:05.997Z</updated>
+    
+    <content type="html"><![CDATA[<p>我是小黄，一名学物理却在化工行业工作的IT工程师。</p><p>现在辞职在家，从零开始学机器学习。</p><p>下面是我的书单：</p><ul><li>Deep Learning from Scratch; Seth Weidman; 2019; O’Reilly Media, Inc.</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我是小黄，一名学物理却在化工行业工作的IT工程师。&lt;/p&gt;
+&lt;p&gt;现在辞职在家，从零开始学机器学习。&lt;/p&gt;
+&lt;p&gt;下面是我的书单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deep Learning from Scratch; Seth Weidman; 2019; O’Reilly </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>从零写深度神经网络导览</title>
+    <link href="https://huang-guoliang.github.io/2022/01/15/Machine%20Learning/deep_learning_from_scratch_contents/"/>
+    <id>https://huang-guoliang.github.io/2022/01/15/Machine%20Learning/deep_learning_from_scratch_contents/</id>
     <published>2022-01-15T08:04:20.000Z</published>
-    <updated>2022-01-15T08:05:41.356Z</updated>
+    <updated>2022-01-15T08:34:24.285Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Deep-Learning-from-Scratch"><a href="#Deep-Learning-from-Scratch" class="headerlink" title="Deep Learning from Scratch"></a>Deep Learning from Scratch</h1><h2 id="Chapter-01-xxx"><a href="#Chapter-01-xxx" class="headerlink" title="Chapter 01. xxx"></a>Chapter 01. xxx</h2><h2 id="Chapter-02-xxx"><a href="#Chapter-02-xxx" class="headerlink" title="Chapter 02. xxx"></a>Chapter 02. xxx</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="Chapter-01-xxx"><a href="#Chapter-01-xxx" class="headerlink" title="Chapter 01. xxx"></a>Chapter 01. xxx</h2><h2 id="Chapter-02-xxx"><a href="#Chapter-02-xxx" class="headerlink" title="Chapter 02. xxx"></a>Chapter 02. xxx</h2>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;Deep-Learning-from-Scratch&quot;&gt;&lt;a href=&quot;#Deep-Learning-from-Scratch&quot; class=&quot;headerlink&quot; title=&quot;Deep Learning from Scratch&quot;&gt;&lt;/a&gt;Deep Lea</summary>
+    <summary type="html">&lt;h2 id=&quot;Chapter-01-xxx&quot;&gt;&lt;a href=&quot;#Chapter-01-xxx&quot; class=&quot;headerlink&quot; title=&quot;Chapter 01. xxx&quot;&gt;&lt;/a&gt;Chapter 01. xxx&lt;/h2&gt;&lt;h2 id=&quot;Chapter-02-xxx&quot;</summary>
       
     
     
@@ -36,27 +60,7 @@
     <category term="Machine Learning" scheme="https://huang-guoliang.github.io/categories/Machine-Learning/"/>
     
     
-    <category term="Deep Learning" scheme="https://huang-guoliang.github.io/tags/Deep-Learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Welcome to my blog!</title>
-    <link href="https://huang-guoliang.github.io/2022/01/15/index/"/>
-    <id>https://huang-guoliang.github.io/2022/01/15/index/</id>
-    <published>2022-01-15T05:57:47.107Z</published>
-    <updated>2022-01-15T08:09:27.920Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Welcome-to-my-blog-欢迎光临我的博客"><a href="#Welcome-to-my-blog-欢迎光临我的博客" class="headerlink" title="Welcome to my blog! 欢迎光临我的博客"></a>Welcome to my blog! 欢迎光临我的博客</h1><p>我是小黄，一名学物理在化工行业工作的IT工程师。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Welcome-to-my-blog-欢迎光临我的博客&quot;&gt;&lt;a href=&quot;#Welcome-to-my-blog-欢迎光临我的博客&quot; class=&quot;headerlink&quot; title=&quot;Welcome to my blog! 欢迎光临我的博客&quot;&gt;&lt;/a&gt;Welc</summary>
-      
-    
-    
-    
+    <category term="DL" scheme="https://huang-guoliang.github.io/tags/DL/"/>
     
   </entry>
   
