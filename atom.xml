@@ -6,7 +6,7 @@
   <link href="https://huang-guoliang.github.io/atom.xml" rel="self"/>
   
   <link href="https://huang-guoliang.github.io/"/>
-  <updated>2022-01-18T05:49:47.564Z</updated>
+  <updated>2022-01-18T06:26:34.022Z</updated>
   <id>https://huang-guoliang.github.io/</id>
   
   <author>
@@ -17,19 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>《深度学习在分子与材料中的应用》导览</title>
+    <link href="https://huang-guoliang.github.io/posts/f25b25e8/"/>
+    <id>https://huang-guoliang.github.io/posts/f25b25e8/</id>
+    <published>2022-01-18T06:19:04.000Z</published>
+    <updated>2022-01-18T06:26:34.022Z</updated>
+    
+    
+    
+    
+    <category term="Cheminformatics" scheme="https://huang-guoliang.github.io/categories/Cheminformatics/"/>
+    
+    <category term="DL4MM" scheme="https://huang-guoliang.github.io/categories/Cheminformatics/DL4MM/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>seaborn 教程导览</title>
     <link href="https://huang-guoliang.github.io/posts/a1871603/"/>
     <id>https://huang-guoliang.github.io/posts/a1871603/</id>
     <published>2022-01-18T02:21:56.000Z</published>
-    <updated>2022-01-18T05:49:47.564Z</updated>
+    <updated>2022-01-18T06:09:10.362Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p><a href="https://seaborn.pydata.org">seaborn</a> 是一个用 Python 制作统计图形的库。<br>它构建在 matplotlib 之上，并与 pandas 数据结构紧密集成。<br>它为绘制出吸引注意且信息丰富的统计图形提供了高级接口。</p></blockquote><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>通过 PyPI 或 Anaconda 直接安装：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip 安装</span></span><br><span class="line">pip install seaborn</span><br><span class="line"><span class="comment"># 或 conda 安装</span></span><br><span class="line">conda install seaborn</span><br></pre></td></tr></table></figure><h3 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入 seaborn 库</span></span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line"><span class="comment"># 载入 seaborn 自带的示例数据</span></span><br><span class="line">df = sns.load_dataset(<span class="string">&quot;penguins&quot;</span>)</span><br><span class="line"><span class="comment"># 如果是在 Jupyter Notebook 上运行，</span></span><br><span class="line"><span class="comment"># 可以直接显示出图片</span></span><br><span class="line">plot = sns.pairplot(df, hue=<span class="string">&quot;species&quot;</span>)</span><br><span class="line"><span class="comment"># 保存图片</span></span><br><span class="line">plot.figure.savefig(<span class="string">&quot;out.png&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在非 Jupyter Notebook 环境中，</span></span><br><span class="line"><span class="comment"># 需要 matplotlib 的帮助</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p>轻松绘制出漂亮的图表：</p><p><img src="seaborn_quick_start.png" alt="seaborn 绘图示例"></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p><a href="https://seaborn.pydata.org">Seaborn</a> 是一个用 Python 制作统计图形的库。<br>它构建在 matplotlib 之上，并与 pandas 数据结构紧密集成。<br>它为绘制出吸引注意且信息丰富的统计图形提供了高级接口。</p></blockquote><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>通过 PyPI 或 Anaconda 直接安装：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip 安装</span></span><br><span class="line">pip install seaborn</span><br><span class="line"><span class="comment"># 或 conda 安装</span></span><br><span class="line">conda install seaborn</span><br></pre></td></tr></table></figure><h3 id="快速尝试"><a href="#快速尝试" class="headerlink" title="快速尝试"></a>快速尝试</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入 seaborn 库</span></span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line"><span class="comment"># 载入 seaborn 自带的示例数据，</span></span><br><span class="line"><span class="comment"># 是 pandas 的 DataFrame 格式</span></span><br><span class="line">df = sns.load_dataset(<span class="string">&quot;penguins&quot;</span>)</span><br><span class="line"><span class="comment"># 如果是在 Jupyter Notebook 上运行，</span></span><br><span class="line"><span class="comment"># 可以直接显示出图片</span></span><br><span class="line">plot = sns.pairplot(df, hue=<span class="string">&quot;species&quot;</span>)</span><br><span class="line"><span class="comment"># 保存图片</span></span><br><span class="line">plot.figure.savefig(<span class="string">&quot;out.png&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在非 Jupyter Notebook 环境中，在窗口中</span></span><br><span class="line"><span class="comment"># 显示图片需要 matplotlib 的帮助</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p>轻松绘制出漂亮的图表：</p><p><img src="seaborn_quick_start.png" alt="seaborn 绘图示例"></p>]]></content>
     
     
       
       
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://seaborn.pydata.org&quot;&gt;seaborn&lt;/a&gt; 是一个用 Python 制作统计图形的库。&lt;br&gt;它构建在 matplotlib 之上，并与 pandas 数据结构紧密集成。&lt;br&gt;它为绘制出吸引注</summary>
+&lt;p&gt;&lt;a href=&quot;https://seaborn.pydata.org&quot;&gt;Seaborn&lt;/a&gt; 是一个用 Python 制作统计图形的库。&lt;br&gt;它构建在 matplotlib 之上，并与 pandas 数据结构紧密集成。&lt;br&gt;它为绘制出吸引注</summary>
       
     
     
@@ -48,7 +65,7 @@
     <link href="https://huang-guoliang.github.io/posts/dac470bb/"/>
     <id>https://huang-guoliang.github.io/posts/dac470bb/</id>
     <published>2022-01-17T06:14:39.000Z</published>
-    <updated>2022-01-18T02:43:48.619Z</updated>
+    <updated>2022-01-18T06:18:26.648Z</updated>
     
     <content type="html"><![CDATA[<h2 id="CHAPTER-2-Descriptive-Statistics-Who-was-the-best-baseball-player-of-all-time"><a href="#CHAPTER-2-Descriptive-Statistics-Who-was-the-best-baseball-player-of-all-time" class="headerlink" title="CHAPTER 2. Descriptive Statistics: Who was the best baseball player of all time?"></a>CHAPTER 2. Descriptive Statistics: Who was the best baseball player of all time?</h2><ul><li>要点：<ul><li>平均数容易受到远离[中心区域的“异常值”的干扰而出现失真。</li><li>标准差用于衡量数据相对于平均值的分散程度。</li></ul></li></ul><style>  .article-entry table { width: 50%; }  table th { width: 30px; }</style><div class="table-container"><table><thead><tr><th style="text-align:center"></th><th style="text-align:center">0</th><th style="text-align:center">1</th><th style="text-align:center">2</th><th style="text-align:center">3</th><th style="text-align:center">4</th><th style="text-align:center">5</th><th style="text-align:center">6</th><th style="text-align:center">7</th><th style="text-align:center">8</th><th style="text-align:center">9</th><th style="text-align:center">&gt;10</th></tr></thead><tbody><tr><td style="text-align:center">competitor</td><td style="text-align:center">12</td><td style="text-align:center">14</td><td style="text-align:center">36</td><td style="text-align:center">13</td><td style="text-align:center">8</td><td style="text-align:center">6</td><td style="text-align:center">5</td><td style="text-align:center">3</td><td style="text-align:center">0</td><td style="text-align:center">2</td><td style="text-align:center">1</td></tr><tr><td style="text-align:center">your</td><td style="text-align:center">25</td><td style="text-align:center">31</td><td style="text-align:center">9</td><td style="text-align:center">4</td><td style="text-align:center">3</td><td style="text-align:center">0</td><td style="text-align:center">0</td><td style="text-align:center">1</td><td style="text-align:center">1</td><td style="text-align:center">0</td><td style="text-align:center">26</td></tr></tbody></table></div><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">compet = [<span class="number">12</span>, <span class="number">14</span>, <span class="number">36</span>, <span class="number">13</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line">your = [<span class="number">25</span>, <span class="number">31</span>, <span class="number">9</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">26</span>]</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -64,6 +81,8 @@
     
     <category term="Statistics" scheme="https://huang-guoliang.github.io/categories/Mathematics/Statistics/"/>
     
+    <category term="NakedStats" scheme="https://huang-guoliang.github.io/categories/Mathematics/Statistics/NakedStats/"/>
+    
     
     <category term="Stats" scheme="https://huang-guoliang.github.io/tags/Stats/"/>
     
@@ -74,7 +93,7 @@
     <link href="https://huang-guoliang.github.io/posts/e1f2a54d/"/>
     <id>https://huang-guoliang.github.io/posts/e1f2a54d/</id>
     <published>2022-01-17T02:52:26.000Z</published>
-    <updated>2022-01-17T06:15:31.599Z</updated>
+    <updated>2022-01-18T06:18:25.348Z</updated>
     
     
     
@@ -82,6 +101,8 @@
     <category term="Mathematics" scheme="https://huang-guoliang.github.io/categories/Mathematics/"/>
     
     <category term="Statistics" scheme="https://huang-guoliang.github.io/categories/Mathematics/Statistics/"/>
+    
+    <category term="NakedStats" scheme="https://huang-guoliang.github.io/categories/Mathematics/Statistics/NakedStats/"/>
     
     
     <category term="Stats" scheme="https://huang-guoliang.github.io/tags/Stats/"/>
@@ -93,9 +114,9 @@
     <link href="https://huang-guoliang.github.io/posts/54daf226/"/>
     <id>https://huang-guoliang.github.io/posts/54daf226/</id>
     <published>2022-01-17T02:42:23.000Z</published>
-    <updated>2022-01-17T06:02:26.002Z</updated>
+    <updated>2022-01-18T06:18:24.099Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>英文原版：<a href="https://book.douban.com/subject/19941764/">Naked Statistics</a><br>中文译版：<a href="https://book.douban.com/subject/25717380/">赤裸的统计学</a></p></blockquote><ul><li><strong><em>Introduction: Why I hated calculus but love statistics</em></strong></li><li><a href="../e1f2a54d"><strong><em>Chapter 01. What’s the Point?</em></strong></a></li><li><a href><strong><em>Chapter 02. Descriptive Statistics</em></strong></a></li><li><a href><strong><em>Chapter 03. Deceptive Description</em></strong></a></li><li><a href><strong><em>Chapter 04. Correlation</em></strong></a></li><li><a href><strong><em>Chapter 05. Basic Probability</em></strong></a></li><li><a href><strong><em>Chapter 05½. The Monty Hall Problem</em></strong></a></li><li><a href><strong><em>Chapter 06. Probems with Probaility</em></strong></a></li><li><a href><strong><em>Chapter 07. The Importance of Data</em></strong></a></li><li><a href><strong><em>Chapter 08. The Central Limit Theorm</em></strong></a></li><li><a href><strong><em>Chapter 09. Inference</em></strong></a></li><li><a href><strong><em>Chapter 10. Polling</em></strong></a></li><li><a href><strong><em>Chapter 11. Regression Analysis</em></strong></a></li><li><a href><strong><em>Chapter 12. Common Regression Mistakes</em></strong></a></li><li><a href><strong><em>Chapter 13. Program Evaluations</em></strong></a></li></ul>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>英文原版：<a href="https://book.douban.com/subject/19941764/">Naked Statistics</a><br>中文译版：<a href="https://book.douban.com/subject/25717380/">赤裸的统计学</a></p></blockquote><ul><li><strong><em>Introduction: Why I hated calculus but love statistics</em></strong></li><li><a href="../e1f2a54d"><strong><em>Chapter 01. What’s the Point?</em></strong></a></li><li><a href=""><strong><em>Chapter 02. Descriptive Statistics</em></strong></a></li><li><a href=""><strong><em>Chapter 03. Deceptive Description</em></strong></a></li><li><a href=""><strong><em>Chapter 04. Correlation</em></strong></a></li><li><a href=""><strong><em>Chapter 05. Basic Probability</em></strong></a></li><li><a href=""><strong><em>Chapter 05½. The Monty Hall Problem</em></strong></a></li><li><a href=""><strong><em>Chapter 06. Probems with Probaility</em></strong></a></li><li><a href=""><strong><em>Chapter 07. The Importance of Data</em></strong></a></li><li><a href=""><strong><em>Chapter 08. The Central Limit Theorm</em></strong></a></li><li><a href=""><strong><em>Chapter 09. Inference</em></strong></a></li><li><a href=""><strong><em>Chapter 10. Polling</em></strong></a></li><li><a href=""><strong><em>Chapter 11. Regression Analysis</em></strong></a></li><li><a href=""><strong><em>Chapter 12. Common Regression Mistakes</em></strong></a></li><li><a href=""><strong><em>Chapter 13. Program Evaluations</em></strong></a></li></ul>]]></content>
     
     
       
@@ -110,6 +131,8 @@
     
     <category term="Statistics" scheme="https://huang-guoliang.github.io/categories/Mathematics/Statistics/"/>
     
+    <category term="NakedStats" scheme="https://huang-guoliang.github.io/categories/Mathematics/Statistics/NakedStats/"/>
+    
     
     <category term="Stats" scheme="https://huang-guoliang.github.io/tags/Stats/"/>
     
@@ -120,17 +143,17 @@
     <link href="https://huang-guoliang.github.io/posts/55bc8bfb/"/>
     <id>https://huang-guoliang.github.io/posts/55bc8bfb/</id>
     <published>2022-01-15T08:18:40.000Z</published>
-    <updated>2022-01-17T05:42:19.273Z</updated>
+    <updated>2022-01-18T06:31:56.653Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>我是 <del>老黄</del> 小黄，一名本硕 光学专业 在 化工行业 打滚的 IT 工程师。<br>现在主攻 机器学习 和 化学信息学。</p></blockquote><p><strong><em>我的课程：</em></strong></p><ul><li><strong><em>Dive into Deep Learning</em></strong>　<a href="http://www.d2l.ai/">[课程地址]</a> <a href="https://space.bilibili.com/1567748478/channel/seriesdetail?sid=358497">[视频地址]</a> <a href>[我的笔记]</a></li></ul><p><strong><em>我的书单：</em></strong></p><ul><li><strong><em>Naked Statistics; Charles Wheelan; W. W. Norton &amp; Company, Inc.; 2013.</em></strong>　 <a href="../54daf226">[我的笔记]</a></li><li><strong><em>Deep Learning from Scratch; Seth Weidman; O’Reilly Media, Inc.; 2019.</em></strong>　　<a href>[我的笔记]</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>我是 <del>老黄</del> 小黄，一名本硕 光学专业 在 化工行业 打滚的 IT 工程师。<br>现在主攻 机器学习 和 化学信息学。<br>给我发信息：xh-notes@foxmail.com</p></blockquote><p><strong><em>课程：</em></strong></p><ul><li><strong><em>Dive into Deep Learning</em></strong>　<a href="http://www.d2l.ai/">[课程地址]</a> <a href="https://space.bilibili.com/1567748478/channel/seriesdetail?sid=358497">[视频地址]</a> <a href="">[我的笔记]</a></li></ul><p><strong><em>教程：</em></strong></p><ul><li><strong><em>Seaborn Tutorial</em></strong>　<a href="posts/a1871603">[我的笔记]</a></li></ul><p><strong><em>书单：</em></strong></p><ul><li><strong><em>Deep Learning for Molecules and Materials; Andrew D. White; 2021.</em></strong>　　　 <a href="https://dmol.pub">[在线阅读]</a> <a href="posts/f25b25e8">[我的笔记]</a></li><li><strong><em>Deep Learning from Scratch; Seth Weidman; O’Reilly Media, Inc.; 2019.</em></strong>　　<a href="">[我的笔记]</a></li><li><strong><em>Naked Statistics; Charles Wheelan; W. W. Norton &amp; Company, Inc.; 2013.</em></strong>　 <a href="posts/54daf226">[我的笔记]</a></li></ul>]]></content>
     
     
       
       
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;我是 &lt;del&gt;老黄&lt;/del&gt; 小黄，一名本硕 光学专业 在 化工行业 打滚的 IT 工程师。&lt;br&gt;现在主攻 机器学习 和 化学信息学。&lt;/p&gt;
+&lt;p&gt;我是 &lt;del&gt;老黄&lt;/del&gt; 小黄，一名本硕 光学专业 在 化工行业 打滚的 IT 工程师。&lt;br&gt;现在主攻 机器学习 和 化学信息学。&lt;br&gt;给我发信息：xh-notes@foxmail.com&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;我的课程：&lt;/em&gt;&lt;/strong&gt;&lt;</summary>
+&lt;p&gt;&lt;s</summary>
       
     
     
