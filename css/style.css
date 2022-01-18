@@ -179,7 +179,7 @@ code {
   position: relative;
 }
 #container > .outer {
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 1200px) {
   #main {
@@ -1751,7 +1751,7 @@ ol.toc {
   line-height: 30px;
 }
 #footer {
-  padding: 20px 0;
+  padding: 5px 0;
   border-top: 1px solid #dfe1e2;
   color: #565a5f;
   font-size: 16px;
