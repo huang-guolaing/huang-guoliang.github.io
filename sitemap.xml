@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huang-guoliang.github.io/posts/68090c70/</loc>
+    
+    <lastmod>2022-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/posts/f25b25e8/</loc>
+    
+    <lastmod>2022-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/posts/dac470bb/</loc>
+    
+    <lastmod>2022-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/posts/e1f2a54d/</loc>
+    
+    <lastmod>2022-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/posts/54daf226/</loc>
+    
+    <lastmod>2022-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huang-guoliang.github.io/posts/55bc8bfb/</loc>
     
     <lastmod>2022-01-18</lastmod>
@@ -21,42 +66,6 @@
   
   <url>
     <loc>https://huang-guoliang.github.io/posts/bc466d5/</loc>
-    
-    <lastmod>2022-01-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huang-guoliang.github.io/posts/f25b25e8/</loc>
-    
-    <lastmod>2022-01-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huang-guoliang.github.io/posts/dac470bb/</loc>
-    
-    <lastmod>2022-01-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huang-guoliang.github.io/posts/e1f2a54d/</loc>
-    
-    <lastmod>2022-01-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huang-guoliang.github.io/posts/54daf226/</loc>
     
     <lastmod>2022-01-18</lastmod>
     
@@ -94,7 +103,7 @@
 
   <url>
     <loc>https://huang-guoliang.github.io/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,14 +111,14 @@
   
   <url>
     <loc>https://huang-guoliang.github.io/tags/Stats/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/tags/seaborn/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -118,49 +127,49 @@
   
   <url>
     <loc>https://huang-guoliang.github.io/categories/Mathematics/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/categories/Mathematics/Statistics/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/categories/Tools/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/categories/Tools/seaborn/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/categories/Cheminformatics/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <lastmod>2022-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://huang-guoliang.github.io/categories/Cheminformatics/DL4MM/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <loc>https://huang-guoliang.github.io/categories/Cheminformatics/dl4mm/</loc>
+    <lastmod>2022-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://huang-guoliang.github.io/categories/Mathematics/Statistics/NakedStats/</loc>
-    <lastmod>2022-01-18</lastmod>
+    <loc>https://huang-guoliang.github.io/categories/Mathematics/Statistics/naked-stats/</loc>
+    <lastmod>2022-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
