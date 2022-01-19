@@ -9,19 +9,20 @@
         <meta name="keywords" content="分子的机器学习描述符" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="为何描述符适合机器学习？ 描述符有哪些类型？ 如何选择描述符？ 总结 参考文献   文章链接：Machine learning descriptors for molecules 为何描述符适合机器学习？描述符有哪些类型？分子描述符分为两类：实验性的描述符和理论性的描述符。  实验性的描述符(Experimental descriptors)：实验测量或理论计算得到的物理化学性质。 理论性的描">
+    <meta name="description" content="文章链接：Machine learning descriptors for molecules   适用于机器学习的描述符有哪些特点？ 描述符有哪些类型？ 如何选择描述符(组合)？ 总结 参考资料   在预测分子性质时，分子结构在被用来训练机器学习模型之前被转换成描述符(descriptors)。  本文的目的是概述分子描述符，并讨论三个主要问题: 适用于机器学习的描述符有哪些特点？选用一个满足以">
 <meta property="og:type" content="article">
 <meta property="og:title" content="分子的机器学习描述符">
 <meta property="og:url" content="https://huang-guoliang.github.io/posts/68090c70/index.html">
 <meta property="og:site_name" content="小黄笔记本">
-<meta property="og:description" content="为何描述符适合机器学习？ 描述符有哪些类型？ 如何选择描述符？ 总结 参考文献   文章链接：Machine learning descriptors for molecules 为何描述符适合机器学习？描述符有哪些类型？分子描述符分为两类：实验性的描述符和理论性的描述符。  实验性的描述符(Experimental descriptors)：实验测量或理论计算得到的物理化学性质。 理论性的描">
+<meta property="og:description" content="文章链接：Machine learning descriptors for molecules   适用于机器学习的描述符有哪些特点？ 描述符有哪些类型？ 如何选择描述符(组合)？ 总结 参考资料   在预测分子性质时，分子结构在被用来训练机器学习模型之前被转换成描述符(descriptors)。  本文的目的是概述分子描述符，并讨论三个主要问题: 适用于机器学习的描述符有哪些特点？选用一个满足以">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://huang-guoliang.github.io/posts/68090c70/workflow.jpg">
 <meta property="og:image" content="https://huang-guoliang.github.io/posts/68090c70/theoretical_descriptors.bmp">
 <meta property="article:published_time" content="2022-01-19T00:49:44.000Z">
-<meta property="article:modified_time" content="2022-01-19T06:57:41.961Z">
+<meta property="article:modified_time" content="2022-01-19T09:20:42.973Z">
 <meta property="article:author" content="Huang Guoliang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huang-guoliang.github.io/posts/68090c70/theoretical_descriptors.bmp">
+<meta name="twitter:image" content="https://huang-guoliang.github.io/posts/68090c70/workflow.jpg">
     
 
     
@@ -354,45 +355,69 @@
             
         
         
-            <!-- toc -->
+            <p>文章链接：<a target="_blank" rel="noopener" href="https://chemintelligence.com/blog/machine-learning-descriptors-molecules">Machine learning descriptors for molecules</a></p>
+<!-- toc -->
 <ul>
-<li><a href="#为何描述符适合机器学习">为何描述符适合机器学习？</a></li>
+<li><a href="#适用于机器学习的描述符有哪些特点">适用于机器学习的描述符有哪些特点？</a></li>
 <li><a href="#描述符有哪些类型">描述符有哪些类型？</a></li>
-<li><a href="#如何选择描述符">如何选择描述符？</a></li>
+<li><a href="#如何选择描述符组合">如何选择描述符(组合)？</a></li>
 <li><a href="#总结">总结</a></li>
-<li><a href="#参考文献">参考文献</a></li>
+<li><a href="#参考资料">参考资料</a></li>
 </ul>
 <!-- tocstop -->
-<p>文章链接：<a target="_blank" rel="noopener" href="https://chemintelligence.com/blog/machine-learning-descriptors-molecules">Machine learning descriptors for molecules</a></p>
-<h3><span id="为何描述符适合机器学习">为何描述符适合机器学习？</span></h3><h3><span id="描述符有哪些类型">描述符有哪些类型？</span></h3><p>分子描述符分为两类：<em>实验性的描述符</em>和<em>理论性的描述符</em>。</p>
+<p>在预测分子性质时，分子结构在被用来训练机器学习模型之前被转换成描述符(descriptors)。</p>
+<p><img src="workflow.jpg" alt="基于机器学习的分子性能预测的典型工作流程&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;"></p>
+<p>本文的目的是概述分子描述符，并讨论三个主要问题:</p>
+<h3><span id="适用于机器学习的描述符有哪些特点">适用于机器学习的描述符有哪些特点？</span></h3><p>选用一个满足以下三个标准的描述符来编码你的分子：</p>
+<ol>
+<li>描述符应与将要预测的分子性质有较高的相关性；</li>
+<li>对应不同的分子结构，描述符应有有所差异；</li>
+<li>根据分子大小选用合适的描述符(不是所有的描述符都适合所有大小的分子)。</li>
+</ol>
+<p>针对具体的机器学习任务，描述符还需要遵循其他一些标准，例如：</p>
 <ul>
-<li>实验性的描述符(Experimental descriptors)：实验测量或理论计算得到的物理化学性质。</li>
-<li>理论性的描述符(Theoretical descriptors)：来自于分子的符号表示。根据”维度“又可分为以下五类:<ul>
-<li>0维描述符(0D descriptors)：不提供任何有关分子结构或原子连通性信息的分子描述符。<br>例如，原子数、键数或分子量都是0D描述符。它们的优点是很容易获得，但要与其他描述符组合使用；</li>
-<li>1维描述符(1D descriptors)：由一组子结构(如官能团)计算得到的描述符。<br>其优点也是容易获得。其中，分子指纹就是一类最常见的1D描述符；</li>
-<li>2维描述符(2D descriptors)：通过分子的图表示(graph representation)获得分子拓扑信息的描述符。<br>典型的2D描述符是邻接矩阵(Adjacency matrix)，库仑矩阵(Coulomb matrix)和距离矩阵(Distance matrix)。<br>由于2D描述符对分子的结构特征(大小、形状和对称性)很敏感，因此它们是常用的一类描述符；</li>
-<li>3维描述符(3D descriptors)：提供有关分子原子空间坐标信息的几何描述符。<br>最著名的3D描述符是分子矩阵(Molecular matrix)和3D-MoRSE描述符。<br>在分子矩阵的情况下，这类描述符提供了大量关于分子的信息，并且具有区分异构分子的优势。<br>然而，由于几何描述符的复杂性，其计算十分耗时。</li>
-<li>4维描述符(4D descriptors)：也被称为“基于网格的描述符”。这类描述符除了分子几何外，还引入了第四维空间。<br>这个新维度通常表征分子与受体活性位点之间的相互作用或分子的多重构象状态。<br>常用的4D描述符有CoMFA和GRID。<br>4D描述符的一个优点是，它们提供了比其他描述符更多的信息，并且总是能够为结构不同的分子生成不同的值。<br>然而，就像3D描述符一样，4D描述符因其高复杂性而难以获取。</li>
+<li>能区分同分异构体；</li>
+<li>可解码(从描述符返回到分子结构)；</li>
+<li>数据量与描述符的维度(通常，数据集中的分子数量应远大于描述符的维数)。</li>
+</ul>
+<h3><span id="描述符有哪些类型">描述符有哪些类型？</span></h3><p>分子描述符分为两类：实验性的描述符和理论性的描述符。</p>
+<ul>
+<li><strong><em>实验性的描述符(Experimental)</em></strong>：<strong>实验测量或理论计算</strong>得到的物理化学性质。</li>
+<li><strong><em>理论性的描述符(Theoretical)</em></strong>：来自于<strong>分子的符号表示</strong>。根据”维度“又可分为以下五类:<ul>
+<li><strong><em>0维描述符(0D)</em></strong>：<strong>不提供</strong>任何有关<strong>分子结构或原子连通性信息</strong>的分子描述符。<br>例如，原子数、键数或分子量都是0D描述符。它们的优点是很容易获得，但要与其他描述符组合使用；</li>
+<li><strong><em>1维描述符(1D)</em></strong>：由<strong>一组子结构</strong>(如官能团)<strong>计算</strong>得到的描述符。<br>其优点也是容易获得。其中，分子指纹就是一类最常见的1D描述符。</li>
+<li><strong><em>2维描述符(2D)</em></strong>：通过分子的<strong>图表示(graph representation)</strong>获得分子<strong>拓扑信息</strong>的描述符。<br>典型的2D描述符是邻接矩阵(Adjacency matrix)，库仑矩阵(Coulomb matrix)和距离矩阵(Distance matrix)。<br>由于2D描述符对分子的结构特征(大小、形状和对称性)很敏感，因此它们是常用的一类描述符。</li>
+<li><strong><em>3维描述符(3D)</em></strong>：提供有关分子原子空间<strong>坐标信息</strong>的几何描述符。<br>最著名的3D描述符是分子矩阵(Molecular matrix)和3D-MoRSE描述符。<br>在分子矩阵的情况下，这类描述符提供了大量关于分子的信息，并且具有区分异构分子的优势。<br>然而，由于几何描述符的复杂性，其计算十分耗时。</li>
+<li><strong><em>4维描述符(4D)</em></strong>：也被称为“基于<strong>网格</strong>的描述符”。这类描述符除了分子几何外，还引入了第四维空间。<br>这个新维度通常表征分子与受体活性位点之间的相互作用或分子的多重构象状态。<br>常用的4D描述符有CoMFA和GRID。<br>4D描述符的一个优点是，它们提供了比其他描述符更多的信息，并且总是能够为结构不同的分子生成不同的值。<br>然而，就像3D描述符一样，4D描述符因其高复杂性而难以获取。</li>
 </ul>
 </li>
 </ul>
-<p><img src="theoretical_descriptors.bmp" alt="图示五类理论性的描述符(以布洛芬为例)&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;"></p>
-<h3><span id="如何选择描述符">如何选择描述符？</span></h3><ul>
+<p><img src="theoretical_descriptors.bmp" alt="图示五类理论性的描述符(以布洛芬为例)&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;"></p>
+<h3><span id="如何选择描述符组合">如何选择描述符(组合)？</span></h3><ul>
 <li>从海量描述符中选择合适的描述符(组合)是一项非常困难的任务。</li>
-<li>主要有两种选择策略：<em>穷举搜索</em>和<em>优化算法</em>。<ul>
-<li>穷举搜索，也就是全子集模型(All Subset Model, ASM)。<br>N个描述符就有N<sup>2-1</sup>种组合。<br>此策略理论上能找到最优的描述符组合，但描述符数量过大时极为消耗算力，<br>比较适合只考虑少量描述符的情况。</li>
-<li>优化算法是通过迭代方法找出能使预测模型结果最优的描述符组合。<br>比较常用的算法有进化规划(evolutionary programming，EP)，<br>蚁群优化(ant colony optimization，ACO)，<br>顺序查找(sequential search，SS)和遗传算法(genetic algorithms，GAs)。<br>一般的优化流程如下图所示：</li>
+<li>主要有两种选择策略：穷举搜索和优化算法。<ul>
+<li><strong><em>穷举搜索(Exhaustive search)</em></strong>，也就是<strong>全子集</strong>模型(All Subset Model, ASM)。<br>N个描述符就有N<sup>2-1</sup>种组合。<br>此策略理论上能找到最优的描述符组合，但描述符数量过大时极为消耗算力，<br>比较适合只考虑少量描述符的情况。</li>
+<li><strong><em>优化算法(Optimization algorithms)</em></strong>，是通过<strong>迭代</strong>方法找出能使预测模型结果最优的描述符组合。<br>比较常用的算法有进化规划(evolutionary programming，EP)，<br>蚁群优化(ant colony optimization，ACO)，<br>顺序查找(sequential search，SS)和遗传算法(genetic algorithms，GAs)。<br>一般的优化流程如下图所示：</li>
 </ul>
 </li>
 </ul>
 <div id="flowchart-0" class="flow-chart"></div>
 
 <h3><span id="总结">总结</span></h3><ul>
-<li>为了在机器学习项目中可用，分子必须用描述符表示。描述符的选择很重要，因为它对模型的预测性能有很大的影响。</li>
-<li>有许多描述符，其中一些具有特异性(例如，区分异构体的能力)，但在选择描述符时，四个主要关注点是描述符与预测性质之间的相关性，描述符为结构不同的分子生成不同值的能力，描述符的维数和可用的数据量。</li>
-<li>描述符不能完全描述分子的结构复杂性。这个问题可以通过使用高维描述符或多个描述符部分地解决。但使用高维描述符或多个描述符会增加机器学习模型的复杂度而降低机器学习算法的性能。</li>
+<li>分子用描述符表示后，可作为机器学习模型的特征输入。</li>
+<li>描述符的选择很重要，因为它对模型的预测性能有很大的影响。</li>
+<li>在选择描述符时，有四个关注点：<ul>
+<li>描述符与预测性质之间的相关性</li>
+<li>描述符为结构不同的分子生成不同值的能力</li>
+<li>描述符的维数</li>
+<li>可用的数据量</li>
 </ul>
-<h3><span id="参考文献">参考文献</span></h3><p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始优化
+</li>
+<li>描述符不能完全描述分子的结构复杂性，可通过使用高维描述符或多个描述符部分地解决。</li>
+<li>使用高维描述符或描述符组合会增加模型的复杂度而降低算法的性能。</li>
+</ul>
+<h3><span id="参考资料">参考资料</span></h3><div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始优化
 op1=>operation: 候选的描述符集合
 op2=>operation: 描述符子集
 cond=>condition: 预测模型评估
@@ -400,8 +425,7 @@ e=>end: 最优的描述符子集
     
 st->op1->op2(right)->cond
 cond(no)->op1
-cond(yes)->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><a target="_blank" rel="noopener" href="https://link.springer.com/protocol/10.1007/978-1-4939-7899-1_1">Molecular descriptors for structure–activity applications: a hands-on approach</a></span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div>&lt;/div&gt;</div></p>
-
+cond(yes)->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0010465519303042">DScribe: Library of descriptors for machine learning in materials science</a></span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a target="_blank" rel="noopener" href="https://link.springer.com/protocol/10.1007/978-1-4939-7899-1_1">Molecular descriptors for structure–activity applications: a hands-on approach</a></span><a href="#fnref:2" rev="footnote"> ↩</a></li></ol></div></div></div>
             </div>
         
         <footer class="article-footer">

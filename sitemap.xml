@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huang-guoliang.github.io/posts/55bc8bfb/</loc>
+    
+    <lastmod>2022-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huang-guoliang.github.io/posts/68090c70/</loc>
     
     <lastmod>2022-01-19</lastmod>
@@ -41,15 +50,6 @@
     <loc>https://huang-guoliang.github.io/posts/54daf226/</loc>
     
     <lastmod>2022-01-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huang-guoliang.github.io/posts/55bc8bfb/</loc>
-    
-    <lastmod>2022-01-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
