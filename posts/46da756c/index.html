@@ -9,18 +9,21 @@
         <meta name="keywords" content="seaborn" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="1import seaborn as sns Long-form dataA long-form data table has the following characteristics:  Each variable is a column Each observation is a row  12flights &#x3D; sns.load_dataset(&quot;flights&quot;)fl">
+    <meta name="description" content="1234&gt;&gt;&gt; import matplotlib.pyplot as plt&gt;&gt;&gt; import seaborn as sns&gt;&gt;&gt; sns.__version__&amp;#x27;0.11.2&amp;#x27; 长格式数据(Long-form data)一个长格式数据的表格具有以下特征：  一列代表一个变量 一行代表一个观测结果(样本)  以航班(fl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="seaborn教程02-seaborn支持的数据格式">
 <meta property="og:url" content="https://huang-guoliang.github.io/posts/46da756c/index.html">
 <meta property="og:site_name" content="小黄笔记本">
-<meta property="og:description" content="1import seaborn as sns Long-form dataA long-form data table has the following characteristics:  Each variable is a column Each observation is a row  12flights &#x3D; sns.load_dataset(&quot;flights&quot;)fl">
+<meta property="og:description" content="1234&gt;&gt;&gt; import matplotlib.pyplot as plt&gt;&gt;&gt; import seaborn as sns&gt;&gt;&gt; sns.__version__&amp;#x27;0.11.2&amp;#x27; 长格式数据(Long-form data)一个长格式数据的表格具有以下特征：  一列代表一个变量 一行代表一个观测结果(样本)  以航班(fl">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://huang-guoliang.github.io/posts/46da756c/long_form.png">
+<meta property="og:image" content="https://huang-guoliang.github.io/posts/46da756c/wide_form.png">
 <meta property="article:published_time" content="2022-01-20T09:01:36.000Z">
-<meta property="article:modified_time" content="2022-01-20T09:01:47.444Z">
+<meta property="article:modified_time" content="2022-01-22T06:50:44.965Z">
 <meta property="article:author" content="Huang Guoliang">
 <meta property="article:tag" content="seaborn">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huang-guoliang.github.io/posts/46da756c/long_form.png">
     
 
     
@@ -229,6 +232,15 @@
                             Tools
                         </a>
                          <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            PyTorch
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/posts/42477f40/">通过Flask REST API部署PyTorch</a></li>  </ul> 
+                    </li> 
+                    
                     <li class="directory open">
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder-open"></i>
@@ -358,73 +370,21 @@
             
         
         
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br></pre></td></tr></table></figure>
-<h3><span id="long-form-data">Long-form data</span></h3><p>A long-form data table has the following characteristics:</p>
+            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sns.__version__</span><br><span class="line"><span class="string">&#x27;0.11.2&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3><span id="长格式数据long-form-data">长格式数据(Long-form data)</span></h3><p>一个长格式数据的表格具有以下特征：</p>
 <ul>
-<li>Each variable is a column</li>
-<li>Each observation is a row</li>
+<li>一列代表一个变量</li>
+<li>一行代表一个观测结果(样本)</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flights = sns.load_dataset(<span class="string">&quot;flights&quot;</span>)</span><br><span class="line">flights.head()</span><br></pre></td></tr></table></figure>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>year</th>
-      <th>month</th>
-      <th>passengers</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1949</td>
-      <td>Jan</td>
-      <td>112</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1949</td>
-      <td>Feb</td>
-      <td>118</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1949</td>
-      <td>Mar</td>
-      <td>132</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1949</td>
-      <td>Apr</td>
-      <td>129</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1949</td>
-      <td>May</td>
-      <td>121</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sns.relplot(</span><br><span class="line">    data=flights,</span><br><span class="line">    x=<span class="string">&quot;year&quot;</span>,</span><br><span class="line">    y=<span class="string">&quot;passengers&quot;</span>,</span><br><span class="line">    hue=<span class="string">&quot;month&quot;</span>,</span><br><span class="line">    kind=<span class="string">&quot;line&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
+<p>以航班(flights)数据集为例，它记录了从1949年到1960年每个月乘坐飞机的乘客数量。该数据集有三个变量(年、月和乘客数量):</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>flights = sns.load_dataset(<span class="string">&quot;flights&quot;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>flights.head()</span><br><span class="line">   year month  passengers</span><br><span class="line"><span class="number">0</span>  <span class="number">1949</span>   Jan         <span class="number">112</span></span><br><span class="line"><span class="number">1</span>  <span class="number">1949</span>   Feb         <span class="number">118</span></span><br><span class="line"><span class="number">2</span>  <span class="number">1949</span>   Mar         <span class="number">132</span></span><br><span class="line"><span class="number">3</span>  <span class="number">1949</span>   Apr         <span class="number">129</span></span><br><span class="line"><span class="number">4</span>  <span class="number">1949</span>   May         <span class="number">121</span></span><br></pre></td></tr></table></figure>
+<p>对于长格式数据，通过将表中的列显式分配给一个变量，就可以为它们在图中赋予角色。<br>例如，制作每年乘客数量的月度图：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">plot_long_form = sns.relplot(</span><br><span class="line">  data=flights,</span><br><span class="line">  x=<span class="string">&quot;year&quot;</span>,</span><br><span class="line">  y=<span class="string">&quot;passengers&quot;</span>,</span><br><span class="line">  hue=<span class="string">&quot;month&quot;</span>,</span><br><span class="line">  kind=<span class="string">&quot;line&quot;</span></span><br><span class="line">)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><br><img src="long_form.png" alt="长格式数据绘出的每年乘客数量的月度图"></p>
+<h3><span id="宽格式数据wide-form-data">宽格式数据(Wide-form data)</span></h3><p>一些简单的数据集采用宽格式，列和行包含不同变量的级别。<br>通过“透视”的方式将航班数据集转换为宽格式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>flights_wide = flights.pivot(</span><br><span class="line"><span class="meta">... </span>  index=<span class="string">&quot;year&quot;</span>,</span><br><span class="line"><span class="meta">... </span>  columns=<span class="string">&quot;month&quot;</span>,</span><br><span class="line"><span class="meta">... </span>  values=<span class="string">&quot;passengers&quot;</span></span><br><span class="line"><span class="meta">... </span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>flights_wide.head()</span><br><span class="line">month  Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec</span><br><span class="line">year</span><br><span class="line"><span class="number">1949</span>   <span class="number">112</span>  <span class="number">118</span>  <span class="number">132</span>  <span class="number">129</span>  <span class="number">121</span>  <span class="number">135</span>  <span class="number">148</span>  <span class="number">148</span>  <span class="number">136</span>  <span class="number">119</span>  <span class="number">104</span>  <span class="number">118</span></span><br><span class="line"><span class="number">1950</span>   <span class="number">115</span>  <span class="number">126</span>  <span class="number">141</span>  <span class="number">135</span>  <span class="number">125</span>  <span class="number">149</span>  <span class="number">170</span>  <span class="number">170</span>  <span class="number">158</span>  <span class="number">133</span>  <span class="number">114</span>  <span class="number">140</span></span><br><span class="line"><span class="number">1951</span>   <span class="number">145</span>  <span class="number">150</span>  <span class="number">178</span>  <span class="number">163</span>  <span class="number">172</span>  <span class="number">178</span>  <span class="number">199</span>  <span class="number">199</span>  <span class="number">184</span>  <span class="number">162</span>  <span class="number">146</span>  <span class="number">166</span></span><br><span class="line"><span class="number">1952</span>   <span class="number">171</span>  <span class="number">180</span>  <span class="number">193</span>  <span class="number">181</span>  <span class="number">183</span>  <span class="number">218</span>  <span class="number">230</span>  <span class="number">242</span>  <span class="number">209</span>  <span class="number">191</span>  <span class="number">172</span>  <span class="number">194</span></span><br><span class="line"><span class="number">1953</span>   <span class="number">196</span>  <span class="number">196</span>  <span class="number">236</span>  <span class="number">235</span>  <span class="number">229</span>  <span class="number">243</span>  <span class="number">264</span>  <span class="number">272</span>  <span class="number">237</span>  <span class="number">211</span>  <span class="number">180</span>  <span class="number">201</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>plot_wide_form = sns.relplot(</span><br><span class="line"><span class="meta">... </span>  data=flights_wide,</span><br><span class="line"><span class="meta">... </span>  kind=<span class="string">&quot;line&quot;</span></span><br><span class="line"><span class="meta">... </span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="wide_form.png" alt="宽格式数据绘出的每年乘客数量的月度图"></p>
+<p>这个图与上一个图看似相似，但有明显的不同。<br>Seaborn将<code>DataFrame</code>的索引<code>year</code>分配给<code>x</code>，将<code>DataFrame</code>的值分配给<code>y</code>，为每个月绘制了一条单独的线。<br>当数据集通过<code>pivot</code>操作将其从长格式转换为宽格式时，乘客数量(passengers)的含义信息就丢失了。<br>因此，图中没有y轴标签。(这些线在这里也有破折号，因为<code>relplot()</code>将列变量映射为颜色和样式语义，以便更容易访问plot。在长格式的情况下我们没有这样做，但是我们可以通过设置style=”month”来实现)。</p>
+<h3><span id="宽格式数据可视化的选项">宽格式数据可视化的选项</span></h3>
             </div>
         
         <footer class="article-footer">
@@ -435,6 +395,15 @@
 <!-- 
     
 <nav id="article-nav">
+    
+        <a href="/posts/42477f40/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    通过Flask REST API部署PyTorch
+                
+            </div>
+        </a>
     
     
         <a href="/posts/68090c70/" id="article-nav-older" class="article-nav-link-wrap">
