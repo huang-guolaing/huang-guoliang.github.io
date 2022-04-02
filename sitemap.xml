@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huang-guoliang.github.io/posts/55bc8bfb/</loc>
+    
+    <lastmod>2022-04-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/posts/e918a543/</loc>
+    
+    <lastmod>2022-04-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huang-guoliang.github.io/posts/42477f40/</loc>
     
     <lastmod>2022-01-22</lastmod>
@@ -39,15 +57,6 @@
   
   <url>
     <loc>https://huang-guoliang.github.io/posts/a1871603/</loc>
-    
-    <lastmod>2022-01-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huang-guoliang.github.io/posts/55bc8bfb/</loc>
     
     <lastmod>2022-01-19</lastmod>
     
@@ -121,50 +130,57 @@
 
   <url>
     <loc>https://huang-guoliang.github.io/</loc>
-    <lastmod>2022-01-22</lastmod>
+    <lastmod>2022-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://huang-guoliang.github.io/tags/Stats/</loc>
-    <lastmod>2022-01-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huang-guoliang.github.io/tags/seaborn/</loc>
-    <lastmod>2022-01-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://huang-guoliang.github.io/tags/ML/</loc>
-    <lastmod>2022-01-22</lastmod>
+    <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/tags/Descriptor/</loc>
-    <lastmod>2022-01-22</lastmod>
+    <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/tags/PyTorch/</loc>
-    <lastmod>2022-01-22</lastmod>
+    <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/tags/Flask/</loc>
-    <lastmod>2022-01-22</lastmod>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/tags/seaborn/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/tags/Stats/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/tags/Bayes/</loc>
+    <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -172,57 +188,64 @@
 
   
   <url>
-    <loc>https://huang-guoliang.github.io/categories/Mathematics/</loc>
-    <lastmod>2022-01-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huang-guoliang.github.io/categories/Mathematics/Statistics/</loc>
-    <lastmod>2022-01-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huang-guoliang.github.io/categories/Tools/</loc>
-    <lastmod>2022-01-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huang-guoliang.github.io/categories/Tools/seaborn/</loc>
-    <lastmod>2022-01-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://huang-guoliang.github.io/categories/Cheminformatics/</loc>
-    <lastmod>2022-01-22</lastmod>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/categories/Mathematics/</loc>
+    <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/categories/Cheminformatics/dl4mm/</loc>
-    <lastmod>2022-01-22</lastmod>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/categories/Mathematics/Statistics/</loc>
+    <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/categories/Mathematics/Statistics/naked-stats/</loc>
-    <lastmod>2022-01-22</lastmod>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/categories/Mathematics/Statistics/think-bayes/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/categories/Tools/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huang-guoliang.github.io/categories/Tools/seaborn/</loc>
+    <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huang-guoliang.github.io/categories/Tools/PyTorch/</loc>
-    <lastmod>2022-01-22</lastmod>
+    <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

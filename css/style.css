@@ -1000,7 +1000,7 @@ div.article-meta-button a:hover {
 }
 .article-entry img,
 .article-entry video {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   display: block;
   margin: auto;
@@ -1009,18 +1009,47 @@ div.article-meta-button a:hover {
   border: none;
 }
 .article-entry table {
-  width: 100%;
+  margin-bottom: 20px;
+  white-space: nowrap;
   border-collapse: collapse;
   border-spacing: 0;
+  border: 0;
+  background-color: transparent;
 }
-.article-entry th {
+.article-entry table thead {
+  border-bottom: 1px solid;
+  vertical-align: bottom;
+}
+.article-entry table tr,
+.article-entry table th,
+.article-entry table td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.article-entry table tbody,
+.article-entry table tr,
+.article-entry table th:only-of-type {
+  vertical-align: middle;
+}
+.article-entry table tbody,
+.article-entry table tr,
+.article-entry table th {
+  vertical-align: top;
+}
+.article-entry table thead,
+.article-entry table th {
+  text-align: right;
+}
+.article-entry table th {
   font-weight: bold;
-  border-bottom: 3px solid #dfe1e2;
-  padding-bottom: 0.5em;
 }
-.article-entry td {
-  border-bottom: 1px solid #dfe1e2;
-  padding: 10px 0;
+.article-entry table tr:nth-child(even) {
+  background: #f5f5f5;
 }
 .article-entry blockquote {
   position: static;
@@ -1353,7 +1382,7 @@ div .article-more-link {
 }
 .article-gallery .gallery-item img {
   display: block;
-  max-width: 100%;
+  max-width: 50%;
   margin: 0 auto;
 }
 .toc-article {
