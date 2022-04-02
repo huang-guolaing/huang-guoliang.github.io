@@ -6,7 +6,7 @@
   <link href="https://huang-guoliang.github.io/atom.xml" rel="self"/>
   
   <link href="https://huang-guoliang.github.io/"/>
-  <updated>2022-04-02T11:24:23.848Z</updated>
+  <updated>2022-04-02T14:40:52.799Z</updated>
   <id>https://huang-guoliang.github.io/</id>
   
   <author>
@@ -17,19 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>《贝叶斯思维》目录</title>
+    <title>《贝叶斯思维(第二版)》辅助代码(1)</title>
+    <link href="https://huang-guoliang.github.io/posts/78bb6cc/"/>
+    <id>https://huang-guoliang.github.io/posts/78bb6cc/</id>
+    <published>2022-04-02T11:44:24.000Z</published>
+    <updated>2022-04-02T14:40:52.799Z</updated>
+    
+    <content type="html"><![CDATA[<p>本篇记录一些在《贝叶斯思维(第二版)》书中使用到的Python代码。</p><p>作者为配合书中讲解专门写了一个名为“empiricaldist”的Python library。该库包含了一些经验分布(empirical distribution)的类及相关函数。</p><p>可以用pip直接安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install empiricaldist</span><br></pre></td></tr></table></figure></p><p>Github地址：<a href="https://github.com/AllenDowney/empiricaldist">empiricaldist</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> scipy.interpolate <span class="keyword">import</span> interp1d</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本篇记录一些在《贝叶斯思维(第二版)》书中使用到的Python代码。&lt;/p&gt;
+&lt;p&gt;作者为配合书中讲解专门写了一个名为“empiricaldist”的Python library。该库包含了一些经验分布(empirical distribution)的类及相关函数。&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="Mathematics" scheme="https://huang-guoliang.github.io/categories/Mathematics/"/>
+    
+    <category term="Statistics" scheme="https://huang-guoliang.github.io/categories/Mathematics/Statistics/"/>
+    
+    <category term="think-bayes" scheme="https://huang-guoliang.github.io/categories/Mathematics/Statistics/think-bayes/"/>
+    
+    
+    <category term="Python" scheme="https://huang-guoliang.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《贝叶斯思维(第二版)》目录</title>
     <link href="https://huang-guoliang.github.io/posts/e918a543/"/>
     <id>https://huang-guoliang.github.io/posts/e918a543/</id>
     <published>2022-04-02T11:20:48.000Z</published>
-    <updated>2022-04-02T11:24:23.848Z</updated>
+    <updated>2022-04-02T11:45:49.016Z</updated>
     
-    <content type="html"><![CDATA[<p>在线版本：<a href="https://allendowney.github.io/ThinkBayes2/">Think Bayes 2</a></p>]]></content>
+    <content type="html"><![CDATA[<p>在线版本：<a href="https://allendowney.github.io/ThinkBayes2/">Think Bayes 2</a></p><p><a href><strong><em>Chapter 00. Some Python Scripts</em></strong></a><br>Chapter 01. Probability<br>Chapter 02. Bayes’s Theorem<br>Chapter 03. Distributions<br>Chapter 04. Estimating Proportions<br>Chapter 05. Estimating Counts<br>Chapter 06. Odds and Addends<br>Chapter 07. Minimum, Maximum, and Mixture<br>Chapter 08. Poisson Processes<br>Chapter 09. Decision Analysis<br>Chapter 10. Testing<br>Chapter 11. Comparison<br>Chapter 12. Classification<br>Chapter 13. Inference<br>Chapter 14. Survival Analysis<br>Chapter 15. Mark and Recapture<br>Chapter 16. Logistic Regression<br>Chapter 17. Regression<br>Chapter 18. Conjugate Priors<br>Chapter 19. MCMC<br>Chapter 20. Approximate Bayesian Computation</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;在线版本：&lt;a href=&quot;https://allendowney.github.io/ThinkBayes2/&quot;&gt;Think Bayes 2&lt;/a&gt;&lt;/p&gt;
-</summary>
+&lt;p&gt;&lt;a href&gt;&lt;strong&gt;&lt;em&gt;Chapter 00. Some Python Scripts&lt;/e</summary>
       
     
     
@@ -276,9 +305,9 @@
     <link href="https://huang-guoliang.github.io/posts/55bc8bfb/"/>
     <id>https://huang-guoliang.github.io/posts/55bc8bfb/</id>
     <published>2022-01-15T08:18:40.000Z</published>
-    <updated>2022-04-02T11:28:01.316Z</updated>
+    <updated>2022-04-02T11:36:30.564Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>我是 <del>老黄</del> 小黄，一名本硕 光学专业 在 化工行业 打滚的 IT 工程师。<br>现在主攻 机器学习 和 化学信息学。<br>给我发信息：xh-notes@foxmail.com</p></blockquote><p><strong><em>课程：</em></strong></p><ul><li><strong><em>Dive into Deep Learning</em></strong>　<a href="http://www.d2l.ai/">[课程地址]</a> <a href="https://space.bilibili.com/1567748478/channel/seriesdetail?sid=358497">[视频地址]</a> <a href>[我的笔记]</a></li></ul><p><strong><em>教程：</em></strong></p><ul><li><strong><em>Seaborn Tutorial</em></strong>　<a href="posts/a1871603">[我的笔记]</a></li></ul><p><strong><em>书单：</em></strong></p><ul><li><strong><em>Think Bayes; Allen B. Downey; 2021.</em></strong><a href="https://allendowney.github.io/ThinkBayes2/">[在线阅读]</a> <a href="posts/e918a543">[我的笔记]</a></li><li><strong><em>Deep Learning for Molecules and Materials; Andrew D. White; 2021.　</em></strong><a href="https://dmol.pub">[在线阅读]</a> <a href="posts/f25b25e8">[我的笔记]</a></li><li><strong><em>Deep Learning from Scratch; Seth Weidman; O’Reilly Media, Inc.; 2019.</em></strong>　<a href>[我的笔记]</a></li><li><strong><em>Naked Statistics; Charles Wheelan; W. W. Norton &amp; Company, Inc.; 2013.</em></strong>　<a href="posts/54daf226">[我的笔记]</a></li></ul><p><strong><em>文章：</em></strong></p><ul><li><strong><em>Machine learning descriptors for molecules; chemintelligence.com; 2021.</em></strong>　<a href="posts/68090c70">[我的笔记]</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>我是 <del>老黄</del> 小黄，一名本硕 光学专业 在 化工行业 打滚的 IT 工程师。<br>现在主攻 机器学习 和 化学信息学。<br>给我发信息：xh-notes@foxmail.com</p></blockquote><p><strong><em>课程：</em></strong></p><ul><li><strong><em>Dive into Deep Learning</em></strong> <a href="http://www.d2l.ai/">[课程地址]</a> <a href="https://space.bilibili.com/1567748478/channel/seriesdetail?sid=358497">[视频地址]</a> <a href>[我的笔记]</a></li></ul><p><strong><em>教程：</em></strong></p><ul><li><strong><em>Seaborn Tutorial</em></strong> <a href="posts/a1871603">[我的笔记]</a></li></ul><p><strong><em>书单：</em></strong></p><ul><li><strong><em>Think Bayes (2nd)</em></strong>; Allen B. Downey; 2021. <a href="https://allendowney.github.io/ThinkBayes2/">[在线阅读]</a> <a href="posts/e918a543">[我的笔记]</a></li><li><strong><em>Deep Learning for Molecules and Materials</em></strong>; Andrew D. White; 2021. <a href="https://dmol.pub">[在线阅读]</a> <a href="posts/f25b25e8">[我的笔记]</a></li><li><strong><em>Deep Learning from Scratch</em></strong>; Seth Weidman; O’Reilly Media, Inc.; 2019. <a href>[我的笔记]</a></li><li><strong><em>Naked Statistics; Charles Wheelan</em></strong>; W. W. Norton &amp; Company, Inc.; 2013. <a href="posts/54daf226">[我的笔记]</a></li></ul><p><strong><em>文章：</em></strong></p><ul><li><strong><em>Machine learning descriptors for molecules</em></strong>; chemintelligence.com; 2021. <a href="posts/68090c70">[我的笔记]</a></li></ul>]]></content>
     
     
       
