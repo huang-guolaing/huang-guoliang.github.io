@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>2022年国际知识发现和数据挖掘竞赛 | 小黄笔记本</title>
+    
+    
+        <meta name="keywords" content="Competition" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="竞赛简介：空间动态风电功率的预测对风能的利用具有实际意义。参赛者须准确估计风力发电厂的风力供应。竞赛网址：Baidu KDD CUP 2022 引言空间动态风能预测挑战赛自1997年以来，与ACM SIGKDD知识发现和数据挖掘大会一起举办的KDD杯已成为一项重要的年度数据挖掘比赛。今年的KDD杯挑战任务既是有趣的技术挑战，且对风能的利用具有现实意义。在此，我们提出了一个空间动态的风电功率预测挑战">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2022年国际知识发现和数据挖掘竞赛">
+<meta property="og:url" content="https://huang-guoliang.github.io/posts/94b6e23/index.html">
+<meta property="og:site_name" content="小黄笔记本">
+<meta property="og:description" content="竞赛简介：空间动态风电功率的预测对风能的利用具有实际意义。参赛者须准确估计风力发电厂的风力供应。竞赛网址：Baidu KDD CUP 2022 引言空间动态风能预测挑战赛自1997年以来，与ACM SIGKDD知识发现和数据挖掘大会一起举办的KDD杯已成为一项重要的年度数据挖掘比赛。今年的KDD杯挑战任务既是有趣的技术挑战，且对风能的利用具有现实意义。在此，我们提出了一个空间动态的风电功率预测挑战">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://bj.bcebos.com/v1/ai-studio-match/file/85ea367ed68c4852ba39b18e82823bcbdc0ac749fe7b41eb80c647eba9901a55?authorization=bce-auth-v1%2F0ef6765c1e494918bc0d4c3ca3e5c6d1%2F2022-03-15T15%3A01%3A09Z%2F-1%2F%2Fc47fb624be5bb904c324d8a9399cdb42ef18569daee21fe557eeaf1abf783782">
+<meta property="og:image" content="http://bj.bcebos.com/v1/ai-studio-match/file/31b165c6dce04593ac7f5deb0606a16fd051867fb08f48b0a9ad5e0bff3538db?authorization=bce-auth-v1%2F0ef6765c1e494918bc0d4c3ca3e5c6d1%2F2022-03-15T15%3A09%3A13Z%2F-1%2F%2Ff41f2106693b19cbc023ac3db2369f1f8ad9d8b8e82a0425b381e80c37b89bdc">
+<meta property="article:published_time" content="2022-04-03T04:37:37.000Z">
+<meta property="article:modified_time" content="2022-04-03T11:54:35.743Z">
+<meta property="article:author" content="Huang Guoliang">
+<meta property="article:tag" content="Competition">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://bj.bcebos.com/v1/ai-studio-match/file/85ea367ed68c4852ba39b18e82823bcbdc0ac749fe7b41eb80c647eba9901a55?authorization=bce-auth-v1%2F0ef6765c1e494918bc0d4c3ca3e5c6d1%2F2022-03-15T15%3A01%3A09Z%2F-1%2F%2Fc47fb624be5bb904c324d8a9399cdb42ef18569daee21fe557eeaf1abf783782">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="小黄笔记本" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">小黄笔记本</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Cheminformatics
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            dl4mm
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/posts/f25b25e8/">《深度学习在分子与材料中的应用》导览</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/posts/68090c70/">分子的机器学习描述符</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            Machine Learning
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            Competition
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            kdd-cup-2022
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="/posts/94b6e23/">2022年国际知识发现和数据挖掘竞赛</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Mathematics
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Statistics
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            naked-stats
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/posts/54daf226/">《赤裸的统计学》目录</a></li>  <li class="file"><a href="/posts/e1f2a54d/">《赤裸的统计学》第1章</a></li>  <li class="file"><a href="/posts/dac470bb/">《赤裸的统计学》第2章</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            think-bayes
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/posts/e918a543/">《贝叶斯思维(第二版)》目录</a></li>  <li class="file"><a href="/posts/78bb6cc/">《贝叶斯思维(第二版)》辅助代码(1)</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Tools
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            PyTorch
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/posts/42477f40/">通过Flask REST API部署PyTorch</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            seaborn
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/posts/a1871603/">seaborn教程导览</a></li>  <li class="file"><a href="/posts/bc466d5/">seaborn教程01</a></li>  <li class="file"><a href="/posts/46da756c/">seaborn教程02-seaborn支持的数据格式</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     <li class="file"><a href="/posts/55bc8bfb/">——欢迎光临我的博客——</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-Machine Learning/Competition/kdd-cup-2022/kdd-cup-2022-00" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Machine-Learning/Competition/">Competition</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Machine-Learning/Competition/kdd-cup-2022/">kdd-cup-2022</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Competition/" rel="tag">Competition</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/posts/94b6e23/">
+            <time datetime="2022-04-03T04:37:37.000Z" itemprop="datePublished">2022-04-03</time>
+        </a>
+    </div>
+
+
+                        <!-- 
+                         -->
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            2022年国际知识发现和数据挖掘竞赛
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>竞赛简介：空间动态风电功率的预测对风能的利用具有实际意义。参赛者须准确估计风力发电厂的风力供应。<br>竞赛网址：<a target="_blank" rel="noopener" href="https://aistudio.baidu.com/aistudio/competition/detail/152/0/introduction">Baidu KDD CUP 2022</a></p>
+<h2><span id="引言">引言</span></h2><h3><span id="空间动态风能预测挑战赛">空间动态风能预测挑战赛</span></h3><p>自1997年以来，与ACM SIGKDD知识发现和数据挖掘大会一起举办的KDD杯已成为一项重要的年度数据挖掘比赛。今年的KDD杯挑战任务既是有趣的技术挑战，且对风能的利用具有现实意义。在此，我们提出了一个空间动态的风电功率预测挑战，以促进数据驱动的机器学习方法对风电功率预测的进展。</p>
+<h3><span id="动机">动机</span></h3><p>风力预测(Wind Power Forecasting，WPF)旨在精确估计出风力发电厂在不同时间尺度下的电力供应。风电是一种清洁安全的可再生能源，但其产能的不持续性导致了供电高波动性。这种波动性给将风力发电纳入电网系统带来了巨大的挑战。为了保持供用电的平衡，风电的波动需要靠别的能源来弥补，但使用其他能源通常缓不济急(如燃煤电厂启动时间至少6小时)。因此，WPF被广泛认为是风电整合和运营中最关键的问题之一。在数据挖掘和机器学习领域，也涌现出大量关于风力发电预测问题的研究。然而，如何很好地处理WPF问题仍然是一项挑战，因为要保证电网的稳定和供应的安全，就必须要求较高的预测精度。</p>
+<h3><span id="挑战赛概述">挑战赛概述</span></h3><p>此次竞赛提供了<strong>龙源电力集团特有的空间动态风电功率预测数据集SDWPF</strong>，该数据集包含了风电机组的空间分布，以及动态环境因素，如时间、天气和涡轮机内部状态。鉴于现有的大多数数据集和竞赛都把WPF视为一个时间序列预测问题，忽视了风力涡轮机的位置及环境信息。<br>SDWPF数据集的示意图如下图所示。每台风力机可分别产生风电$T_i$，风电场的输出功率为所有风力机的功率之和。也就是说，在$t$时刻，风电场的输出功率$W=\sum_iT_i$。</p>
+<p>在此次竞赛任务中有两个不同于以往WPF比赛的特别设置:</p>
+<ol>
+<li>空间分布：竞赛将提供风电厂所有风力涡轮机的相对位置，用于建模风力涡轮机之间的空间相关性。</li>
+<li>动态上下文：提供重要天气情况和每个风力涡轮机监测的内部情况，以方便预测任务。</li>
+</ol>
+<p><img src="http://bj.bcebos.com/v1/ai-studio-match/file/85ea367ed68c4852ba39b18e82823bcbdc0ac749fe7b41eb80c647eba9901a55?authorization=bce-auth-v1%2F0ef6765c1e494918bc0d4c3ca3e5c6d1%2F2022-03-15T15%3A01%3A09Z%2F-1%2F%2Fc47fb624be5bb904c324d8a9399cdb42ef18569daee21fe557eeaf1abf783782" alt="风力场示意图"></p>
+<h3><span id="赛程">赛程</span></h3><p>每个截止时间都是AoE时间23:59</p>
+<ul>
+<li>3月16日，开放报名网站。</li>
+<li>3月20日，公布初始数据。参赛者将通过使用初始的WPF数据进行练习来熟悉赛题。</li>
+<li>4月10日，公布全部数据。我们将发布所有的数据集和基线代码。</li>
+<li>5月10日，开始提交。所有团队都可以尝试演示提交，以确保顺利提交最终测试。</li>
+<li>6月20日，更新测试数据。将发布一个新的测试集用于测试预测。</li>
+<li>7月15日，最后提交的截止日期。每个团队提交最终的预测模型。这些模型将在一个私有测试集上进行评估，以确定获奖候选人团队。</li>
+<li>7月18日，通知获奖者。有关代码和技术论文的通知和说明将会以私人方式发送给获奖者。</li>
+<li>7月21日，获奖者的代码和技术论文提交截止日期。</li>
+<li>7月22日，公布获奖者。</li>
+<li>8月01日，修订技术论文的截止日期。</li>
+<li>8月15日，KDD杯研讨会。</li>
+</ul>
+<h3><span id="奖励">奖励</span></h3><p><strong>常规奖</strong><br>第1名：\$10,000<br>第2名：\$5,000<br>第3名：\$3,000<br>第4-10名：各\$1000<br>对于前15名的选手，我们将各颁发一份等级证书。</p>
+<p><strong>飞桨特别奖</strong>：对于使用PaddlePaddle作为深度学习平台实现挑战解决方案的团队，我们提供了一个特别的PaddlePaddle赛道，并颁发奖品:<br>第1名：\$3,000<br>第2名：\$2,000<br>第3名：\$1,500<br>第4-10名：各\$500<br>对于前15名的选手，我们将各颁发一份飞桨专用赛道的等级证书。所有使用飞桨的队伍都有资格获得常规奖和飞桨特别奖。</p>
+<p>所有获奖的团队成员都将获得百度公司的直接面试推荐，无需进行笔试。</p>
+<h3><span id="规则">规则</span></h3><ul>
+<li>每个提交的文件不能超过200MB。</li>
+<li>每个团队每天最多可以提交3次(在AOE时间23:59刷新)。</li>
+<li>获奖者必须提交完整的代码和一份完整的可复现结果的技术细节报告。获奖团队的代码和报告提交说明将会发布。</li>
+<li>没有竞赛组织方的批准，竞赛中不能使用任何外部数据。</li>
+<li>每位参赛者只可参加一组比赛。如果挑战组织者发现和/或提供证据，任何参加超过一个队的参赛者可能被取消资格，她/他对应的队可能被取消资格。</li>
+<li>任何与百度公司、龙源动力集团(员工、合作伙伴等)有利益冲突的参赛者，不得参加比赛，也无资格获奖。挑战组织者保留核实此类利益冲突的权利。</li>
+<li>每个参赛者参加挑战的资格应符合您的雇主/组织的规则/政策，KDD Cup 2022的规则/政策，以及SIGKDD (ACM知识发现和数据挖掘特别兴趣小组)的规则/政策。挑战组织者撤销核实这种资格的权利。</li>
+<li>挑战赛主办单位保留在任何时间以任何理由限制或限制任何人参加挑战赛的权利。</li>
+<li>1)未在规定时间内提交代码和报告，<br>2)提交的代码不能复制获奖结果，<br>3)提交的技术报告与代码不一致，4)违反其他规则的，将取消获奖资格。</li>
+<li>挑战赛主办单位保留更新奖项设置、比赛时间及规则的权利。</li>
+</ul>
+<h3><span id="研讨会时程">研讨会时程</span></h3><p>前三名的团队和一些被选中的其他团队将被邀请在KDD杯研讨会上展示他们的解决方案，与KDD会议一起。</p>
+<h3><span id="咨询方式">咨询方式</span></h3><p>任何关于挑战的查询和问题都可以发送到<a href="kddcup2022@baidu.com">kddcup2022@baidu.com</a>。关于挑战的讨论或一般性问题，请使用<a target="_blank" rel="noopener" href="https://github.com/PaddlePaddle/PaddleSpatial/discussions/categories/baidukddcup2022">Github discussion</a>。</p>
+<h2><span id="任务内容">任务内容</span></h2><h3><span id="数据描述">数据描述</span></h3><p>来自风电场的风力涡轮机监控与数据采集系统（Supervisory Control and Data Acquisition, SCADA）的情景监测数据将会公布。这些SCADA数据是从龙源电力集团所拥有的风电场（通常由50-200台风力涡轮机组成）的每个风力涡轮机中每15分钟采样一次得到的。该数据集包括影响风力发电的关键外部特征，如风速、风向、外部温度，以及重要的内部特征，如涡轮机转子转速、发电机温度、轮毂温度，可指示每台风力机的运行状态。此外，还将发布风电场中所有风力机的相对距离矩阵，以表征风力机之间的空间相关性。</p>
+<p>完整的数据集将于4月10日发布。</p>
+<p>关于风力发电机的图示如下:<br><img src="http://bj.bcebos.com/v1/ai-studio-match/file/31b165c6dce04593ac7f5deb0606a16fd051867fb08f48b0a9ad5e0bff3538db?authorization=bce-auth-v1%2F0ef6765c1e494918bc0d4c3ca3e5c6d1%2F2022-03-15T15%3A09%3A13Z%2F-1%2F%2Ff41f2106693b19cbc023ac3db2369f1f8ad9d8b8e82a0425b381e80c37b89bdc" alt="风力发电机的图示（图源：&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;）"></p>
+<p>下面详细介绍了数据的每个列的语义含义：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">#</th>
+<th style="text-align:left">列名</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:left">TurbID</td>
+<td style="text-align:left">风力涡轮机ID</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:left">Day</td>
+<td style="text-align:left">记录的日期</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:left">Tmstamp</td>
+<td style="text-align:left">新增数据的时间戳</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:left">Wspd (m/s)</td>
+<td style="text-align:left">风速表所记录的风速</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:left">Wdir(°)</td>
+<td style="text-align:left">风向与涡轮发动机舱位置之间的夹角 <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> <sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:left">Etmp (℃)</td>
+<td style="text-align:left">周围环境的温度</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:left">Itmp (℃)</td>
+<td style="text-align:left">涡轮发动机舱内的温度</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:left">Ndir (°)</td>
+<td style="text-align:left">发动机舱方向，即发动机舱的偏航角</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:left">Pab1 (°)</td>
+<td style="text-align:left">叶片1俯仰角</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:left">Pab2 (°)</td>
+<td style="text-align:left">叶片2俯仰角</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:left">Pab3 (°)</td>
+<td style="text-align:left">叶片3俯仰角</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:left">Prtv (kW)</td>
+<td style="text-align:left">无功功率</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:left">Patv (kW)</td>
+<td style="text-align:left">有功功率（目标变量）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3><span id="评估">评估</span></h3><p>这是一个提前42小时预测空间动态风力发电的挑战。例如，某天早上6点，根据风电场和风力发电机的一系列历史数据，从第二天凌晨0点开始有效预测风力发电。具体来说，在某一时刻，需要预测一个未来长度为168的风力供电时间序列，评估最后96个点的供电值。以均方根误差（Root Mean Square Error, RMSE）和平均绝对误差（Mean Absolute Error, MAE）的平均值作为主要评价分数。<br>理论上，在一个时间点$t_0$，需要预测风电场输出风电功率的时间序列：</p>
+<script type="math/tex; mode=display">
+P = \{ P_{t_0+1}, P_{t_0+2}, P_{t_0+3}, \cdots , P_{t_0+168} \}。</script><p>评价分数定义为：</p>
+<script type="math/tex; mode=display">
+score = \sqrt{\frac{\sum\limits_{i=73}^{168}(P_{t_0+i} - \widehat{P}_{t_0+i})^2}{96}} +
+\frac{\sum\limits_{i=73}^{168}|P_{t_0+i} - \widehat{P}_{t_0+i}|}{96}</script><p>其中<script type="math/tex">\widehat{P}_{t_0+i}</script>为实际功率，<script type="math/tex">P_{t_0+i}</script>为风电场在<script type="math/tex">t_0+i</script>时的预测功率。我们通过增加$t_0$来使用滑动窗口。平均每15分钟计算一次评分。计算分数的示例代码将会提供。<br>此外，获胜的团队需要提交源代码和技术报告，以保证模型的重现性。获奖团队的代码和报告提交说明将于稍后公布。</p>
+<h2><span id="数据集">数据集</span></h2><p>初始数据集：[initial_kddcup.csv]{<a target="_blank" rel="noopener" href="https://bj.bcebos.com/v1/ai-studio-online/3008e18f8bb94d3fbc7b62ccd45eacb27abec26342d649f18f244a60cc3578a0?responseContentDisposition=attachment%3B%20filename%3Dsdwpf134_initial_kddcup.csv&amp;authorization=bce-auth-v1%2F0ef6765c1e494918bc0d4c3ca3e5c6d1%2F2022-03-22T00%3A56%3A15Z%2F-1%2F%2Fa4c9943681828da485d209acd2eda686003aa8355f6aaeccdf652d8d7bd63027}">https://bj.bcebos.com/v1/ai-studio-online/3008e18f8bb94d3fbc7b62ccd45eacb27abec26342d649f18f244a60cc3578a0?responseContentDisposition=attachment%3B%20filename%3Dsdwpf134_initial_kddcup.csv&amp;authorization=bce-auth-v1%2F0ef6765c1e494918bc0d4c3ca3e5c6d1%2F2022-03-22T00%3A56%3A15Z%2F-1%2F%2Fa4c9943681828da485d209acd2eda686003aa8355f6aaeccdf652d8d7bd63027}</a></p>
+<p>此文件为空间动态风力发电预测的初始数据集。该数据集覆盖7天，包括13个列。完整的数据集将覆盖更长的时间范围，并包括更多的列。预测目标值为全部134台风力机的Patv之和(参见任务内容)。</p>
+<h2><span id="参考资料">参考资料</span></h2><p><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/File:EERE_illust_large_turbine.gif">https://en.wikipedia.org/wiki/File:EERE_illust_large_turbine.gif</a><br><sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Wind_turbine#Horizontal_axis">https://en.wikipedia.org/wiki/Wind_turbine#Horizontal_axis</a><br><sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Wind_turbine#Components">https://en.wikipedia.org/wiki/Wind_turbine#Components</a></p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+<!-- 
+    
+<nav id="article-nav">
+    
+    
+        <a href="/posts/78bb6cc/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">《贝叶斯思维(第二版)》辅助代码(1)</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+ -->
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a> <br>
+            Huang Guoliang &copy; 2022
+            <!-- <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a target="_blank" rel="noopener" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+             -->
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
